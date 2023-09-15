@@ -13,6 +13,10 @@
 		0A4DEA692AB2E5B3009F673E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DEA672AB2E5B3009F673E /* Main.storyboard */; };
 		0A4DEA6B2AB2E5B4009F673E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DEA6A2AB2E5B4009F673E /* Assets.xcassets */; };
 		0A4DEA6E2AB2E5B4009F673E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4DEA6C2AB2E5B4009F673E /* LaunchScreen.storyboard */; };
+		0A4DEA762AB2E5F5009F673E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4DEA752AB2E5F5009F673E /* LoginViewController.swift */; };
+		0A733CA22AB4468000634C43 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A733CA12AB4468000634C43 /* User.swift */; };
+		0A733CA42AB458BA00634C43 /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A733CA32AB458BA00634C43 /* EmployeeView.swift */; };
+		0AA1CD602AB3435A0059349F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1CD5F2AB3435A0059349F /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		0A4DEA6A2AB2E5B4009F673E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A4DEA6D2AB2E5B4009F673E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A4DEA6F2AB2E5B4009F673E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A4DEA752AB2E5F5009F673E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0A733CA12AB4468000634C43 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0A733CA32AB458BA00634C43 /* EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeView.swift; sourceTree = "<group>"; };
+		0AA1CD5F2AB3435A0059349F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		0A4DEA602AB2E5B3009F673E /* bestAppPossibleEver */ = {
 			isa = PBXGroup;
 			children = (
+				0A5C30292AB3D1FB003374B1 /* Controller */,
+				0A5C30282AB3D1F1003374B1 /* View */,
+				0AC7ED332AB3A97200F8BB6F /* Model */,
 				0A4DEA612AB2E5B3009F673E /* AppDelegate.swift */,
 				0A4DEA632AB2E5B3009F673E /* SceneDelegate.swift */,
-				0A4DEA652AB2E5B3009F673E /* ViewController.swift */,
 				0A4DEA672AB2E5B3009F673E /* Main.storyboard */,
 				0A4DEA6A2AB2E5B4009F673E /* Assets.xcassets */,
 				0A4DEA6C2AB2E5B4009F673E /* LaunchScreen.storyboard */,
 				0A4DEA6F2AB2E5B4009F673E /* Info.plist */,
 			);
 			path = bestAppPossibleEver;
+			sourceTree = "<group>";
+		};
+		0A5C30282AB3D1F1003374B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A733CA32AB458BA00634C43 /* EmployeeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A5C30292AB3D1FB003374B1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AA1CD5F2AB3435A0059349F /* UserViewController.swift */,
+				0A4DEA752AB2E5F5009F673E /* LoginViewController.swift */,
+				0A4DEA652AB2E5B3009F673E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0AC7ED332AB3A97200F8BB6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A733CA12AB4468000634C43 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A4DEA762AB2E5F5009F673E /* LoginViewController.swift in Sources */,
+				0AA1CD602AB3435A0059349F /* UserViewController.swift in Sources */,
+				0A733CA42AB458BA00634C43 /* EmployeeView.swift in Sources */,
+				0A733CA22AB4468000634C43 /* User.swift in Sources */,
 				0A4DEA662AB2E5B3009F673E /* ViewController.swift in Sources */,
 				0A4DEA622AB2E5B3009F673E /* AppDelegate.swift in Sources */,
 				0A4DEA642AB2E5B3009F673E /* SceneDelegate.swift in Sources */,

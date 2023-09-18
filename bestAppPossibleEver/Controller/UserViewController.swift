@@ -15,6 +15,8 @@ class UserViewController: UIViewController {
         var name:String
     }
     
+    
+    
     let apiUrl = "https://jsonplaceholder.typicode.com/users"
     
     var usersList:[Employee] = []
@@ -36,7 +38,11 @@ class UserViewController: UIViewController {
                         
                         for user in users {
                             self.usersList.append(Employee(name: user.name, company: user.company.name, imageName: "photo\(String(user.id))"))
+                            }
+                        DispatchQueue.main.async{
+                            self.updateEmployeeView()
                         }
+                        
                     } catch {
                         print(error)
                     }
@@ -44,6 +50,14 @@ class UserViewController: UIViewController {
             }.resume()
         }
     }
+    
+    func updateEmployeeView(){
+        if(usersList.count > 0 ){
+            mainVIew.employee = usersList[employeeIndex]
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

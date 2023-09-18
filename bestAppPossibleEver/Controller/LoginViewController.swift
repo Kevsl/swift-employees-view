@@ -9,7 +9,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     var name = ""
-    var password = ""
+    var password = "usersList"
+    let usersListIdentifier = "usersList"
+
+    
     
     @IBOutlet weak var amazingLabel: UILabel!
     @IBOutlet weak var nameInput: UITextField!
@@ -17,13 +20,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         print(password)
-        amazingLabel.text = name
-        nameInput.delegate = self
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self , action: #selector(hideKeyboard)))
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier ==  usersListIdentifier ){
+            if let ulController = segue.destination as? UsersListController{
+         
+                
+            }
+        }
+    }
+
+    
+    
+    
     // action
     @objc func hideKeyboard(){
         view.endEditing(true)
@@ -34,6 +46,11 @@ class LoginViewController: UIViewController {
     
         name = nameInput.text ?? ""
         amazingLabel.text = nameInput.text
+        
+        
+    }
+    @IBAction func navigateUsersList(_ sender: UIButton) {
+        performSegue(withIdentifier: usersListIdentifier, sender: nil)
         
         
     }

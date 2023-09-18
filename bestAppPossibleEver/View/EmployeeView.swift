@@ -18,7 +18,6 @@ class EmployeeView: UIView {
         didSet{
             nameLabel.text = employee.name
             imageView.image = employee.imageView
-            
             companyLabel.text = employee.company
             
         }

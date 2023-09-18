@@ -8,6 +8,8 @@ class ImageView: UIView {
         return imageView
     }()
     
+    var imageUrl = ""
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -30,11 +32,11 @@ class ImageView: UIView {
         ])
     }
     
-    func setImage(fromURL imageURL: URL) {
+    func setImage(fromURL imageUrl: URL) {
       
         let session = URLSession.shared
         
-        let task = session.dataTask(with: imageURL) { [weak self] (data, response, error) in
+        let task = session.dataTask(with: imageUrl) { [weak self] (data, response, error) in
             if error == nil, let data = data {
                 
                 if let image = UIImage(data: data) {
@@ -47,7 +49,7 @@ class ImageView: UIView {
                 print("Error downloading image: \(error?.localizedDescription ?? "Unknown error")")
             }
         }
-
+        
         task.resume()
     }
 }
